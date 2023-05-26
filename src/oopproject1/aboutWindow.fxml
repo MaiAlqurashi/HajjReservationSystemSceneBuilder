@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: E1D8C4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopproject1.AboutWindowController">
+   <children>
+      <Label layoutX="344.0" layoutY="71.0" text="About this Program">
+         <font>
+            <Font name="Andalus" size="36.0" />
+         </font>
+      </Label>
+      <Text layoutX="243.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In order to book for hajj, you are required to fill the application. It is for your own safety, and our application is authorized by the government which means that your information is completely safe, secure, and private." wrappingWidth="515.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="back" layoutX="539.0" layoutY="567.0" mnemonicParsing="false" onAction="#backAction" prefHeight="38.0" prefWidth="77.0" text="back" />
+      <Button fx:id="close" layoutX="378.0" layoutY="567.0" mnemonicParsing="false" onAction="#closeAction" prefHeight="38.0" prefWidth="77.0" text="close" />
+   </children>
+</AnchorPane>

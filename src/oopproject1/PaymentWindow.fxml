@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: E1D8C4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopproject1.PaymentWindowController">
+   <children>
+      <TitledPane animated="false" layoutX="212.0" layoutY="208.0" prefHeight="238.0" prefWidth="240.0" text="Payment Method">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutX="-1.0" layoutY="-2.0" prefHeight="213.0" prefWidth="240.0" style="-fx-background-color: F4F0DB;">
+                     <children>
+                        <RadioButton fx:id="visa" layoutX="35.0" layoutY="14.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="28.0">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="card" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="mastercard" layoutX="34.0" layoutY="51.0" mnemonicParsing="false" toggleGroup="$card" />
+                        <RadioButton fx:id="mada" layoutX="34.0" layoutY="90.0" mnemonicParsing="false" toggleGroup="$card" />
+                        <RadioButton fx:id="americanExpress" layoutX="35.0" layoutY="126.0" mnemonicParsing="false" toggleGroup="$card" />
+                        <RadioButton fx:id="applepay" layoutX="34.0" layoutY="162.0" mnemonicParsing="false" toggleGroup="$card" />
+                        <ImageView fitHeight="40.0" fitWidth="66.0" layoutX="67.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Visa_Inc._logo.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="31.0" fitWidth="66.0" layoutX="74.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MasterCard_Logo.svg.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="23.0" fitWidth="66.0" layoutX="74.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@mada.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="21.0" fitWidth="66.0" layoutX="74.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ae.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="22.0" fitWidth="66.0" layoutX="73.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@apple%20pay.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Pane layoutX="548.0" layoutY="171.0" prefHeight="311.0" prefWidth="278.0">
+         <children>
+            <Label layoutX="21.0" layoutY="25.0" prefHeight="21.0" prefWidth="130.0" text="Card Holder Name" />
+            <TextField fx:id="holdername" layoutX="19.0" layoutY="50.0" />
+            <Label layoutX="21.0" layoutY="93.0" prefHeight="17.0" prefWidth="118.0" text="Card Number" />
+            <TextField fx:id="cardnumber" layoutX="19.0" layoutY="119.0" promptText="xxxx-xxxx-xxxx-xxxx" />
+            <Label layoutX="21.0" layoutY="162.0" prefHeight="17.0" prefWidth="130.0" text="Expiration Date" />
+            <TextField fx:id="cvv" layoutX="21.0" layoutY="258.0" prefHeight="31.0" prefWidth="65.0" promptText="xxx" />
+            <Label layoutX="21.0" layoutY="228.0" text="CVV" />
+            <DatePicker fx:id="exDate" layoutX="19.0" layoutY="191.0" />
+            <ImageView fitHeight="57.0" fitWidth="56.0" layoutX="100.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cvv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="338.0" layoutY="65.0" prefHeight="57.0" prefWidth="325.0" text="Banking Information" textAlignment="CENTER">
+         <font>
+            <Font name="Andalus" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="next" layoutX="446.0" layoutY="563.0" mnemonicParsing="false" onAction="#nextAction" prefHeight="40.0" prefWidth="109.0" text="Next Page" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: E1D8C4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopproject1.CampaignWindowController">
+   <children>
+      <TitledPane fx:id="title2" animated="false" layoutX="294.0" layoutY="195.0" prefHeight="295.0" prefWidth="342.0" text="Campaign Choice">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="340.0" style="-fx-background-color: F4F0DB;">
+               <children>
+                  <Pane layoutX="18.0" layoutY="99.0" prefHeight="150.0" prefWidth="226.0">
+                     <children>
+                        <Label fx:id="l12" layoutX="9.0" layoutY="14.0" prefHeight="27.0" prefWidth="197.0" text="Choose Preferred Campaign">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="radio1" layoutX="16.0" layoutY="51.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="188.0" selected="true" text="Campaign A: 10,000 SR">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="camp" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="radio2" layoutX="16.0" layoutY="82.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="186.0" text="Campaign B: 25,000 SR" toggleGroup="$camp" />
+                        <RadioButton fx:id="radio3" layoutX="16.0" layoutY="116.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="182.0" text="Campaign C: 50,000 SR" toggleGroup="$camp" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="l11" layoutX="38.0" layoutY="14.0" prefHeight="16.0" prefWidth="154.0" text="Your Budget in SR" />
+                  <Slider fx:id="slider" blockIncrement="1000.0" layoutX="41.0" layoutY="73.0" majorTickUnit="11000.0" max="50000.0" min="1000.0" prefHeight="40.0" prefWidth="258.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+                  <Label layoutX="38.0" layoutY="46.0" text="This will help you decide your campaign" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane fx:id="title3" animated="false" layoutX="658.0" layoutY="195.0" prefHeight="249.0" prefWidth="312.0" text="Mark additional features (optional)">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="217.0" prefWidth="319.0" style="-fx-background-color: F4F0DB;">
+               <children>
+                  <CheckBox fx:id="combo1" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="248.0" text="Specific Meals (including snacks)" />
+                  <CheckBox fx:id="combo2" layoutX="13.0" layoutY="52.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="154.0" text="Transportation" />
+                  <CheckBox fx:id="combo3" layoutX="15.0" layoutY="77.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="158.0" text="Wheelchair" />
+                  <CheckBox fx:id="combo4" layoutX="14.0" layoutY="123.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="204.0" text="Water spray + Umberalla" />
+                  <TextField fx:id="textbox1" layoutX="13.0" layoutY="160.0" prefHeight="27.0" prefWidth="195.0" promptText="Other specifications:" />
+                  <ImageView fx:id="transport" fitHeight="41.0" fitWidth="65.0" layoutX="149.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@public_transportation.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="wheel" fitHeight="31.0" fitWidth="27.0" layoutX="128.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@wheel.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="umbrella" fitHeight="43.0" fitWidth="41.0" layoutX="208.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@ub-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="food" fitHeight="63.0" fitWidth="60.0" layoutX="259.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@food-removebg-preview%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Label fx:id="title" alignment="CENTER" layoutX="313.0" layoutY="64.0" prefHeight="53.0" prefWidth="375.0" text="Campaign Information" textFill="#070707">
+         <font>
+            <Font name="Andalus" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="next" layoutX="452.0" layoutY="576.0" mnemonicParsing="false" onAction="#nextAction" prefHeight="42.0" prefWidth="97.0" text="Next Page" />
+      <TitledPane fx:id="title1" animated="false" layoutX="14.0" layoutY="195.0" prefHeight="295.0" prefWidth="258.0" text="Campaign Specifications:">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="285.0" prefWidth="256.0" style="-fx-background-color: F4F0DB;">
+               <children>
+                  <Label fx:id="label1" layoutX="12.0" layoutY="23.0" text="Campaign A: includes food, " />
+                  <Label fx:id="l2" layoutX="12.0" layoutY="44.0" text="drinks, and transportation." />
+                  <Label fx:id="l5" layoutX="13.0" layoutY="122.0" text="Campaign B: Open buffet," />
+                  <Label fx:id="l6" layoutX="14.0" layoutY="143.0" prefHeight="21.0" prefWidth="231.0" text="deluxe private rooms, private" />
+                  <Label fx:id="l3" layoutX="11.0" layoutY="73.0" prefHeight="21.0" prefWidth="197.0" text="Campaign B and C includes">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l4" layoutX="12.0" layoutY="94.0" text="everything that Campaign A has">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="l7" layoutX="14.0" layoutY="164.0" text="transportation" />
+                  <Label fx:id="l8" layoutX="14.0" layoutY="194.0" prefHeight="21.0" prefWidth="237.0" text="Campaign C: Open 24 hours buffet" />
+                  <Label fx:id="l9" layoutX="14.0" layoutY="215.0" text="VIP private rooms, strategic" />
+                  <Label fx:id="l10" layoutX="14.0" layoutY="236.0" text="location." />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anc" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: E1D8C4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopproject1.PersonalInfoWindowController">
+   <children>
+      <Pane layoutX="430.0" layoutY="122.0" prefHeight="203.0" prefWidth="199.0">
+         <children>
+            <TitledPane fx:id="CLSPane" animated="false" layoutX="100.0" layoutY="102.0" prefHeight="120.0" prefWidth="266.0" text="Current Living Status">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: F4F0DB;">
+                     <children>
+                        <RadioButton fx:id="resident" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Resident" textFill="#1b0808">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="rOrVgroup" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="visitor" layoutX="14.0" layoutY="53.0" mnemonicParsing="false" text="Visitor" toggleGroup="$rOrVgroup" />
+                        <ImageView fx:id="rOrVPic" fitHeight="57.0" fitWidth="85.0" layoutX="122.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@idnot-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+         </children></Pane>
+      <TitledPane fx:id="PIPane" animated="false" layoutX="196.0" layoutY="218.0" prefHeight="264.0" prefWidth="275.0" style="-fx-background-color: F4F0DB;" text="Personal Information">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="222.0" prefWidth="264.0" style="-fx-background-color: F4F0DB;">
+               <children>
+                  <Label fx:id="nameLabel" layoutX="14.0" layoutY="22.0" text="Full Name:" />
+                  <TextField fx:id="nameTextField" layoutX="113.0" layoutY="17.0" prefHeight="31.0" prefWidth="122.0" />
+                  <Label fx:id="iDLabel" layoutX="14.0" layoutY="79.0" text="ID Number:" />
+                  <TextField fx:id="iDTextField" layoutX="113.0" layoutY="74.0" prefHeight="31.0" prefWidth="122.0" />
+                  <Label fx:id="countryLabel" layoutX="14.0" layoutY="137.0" text="Country:" />
+                  <ComboBox fx:id="countryBox" layoutX="98.0" layoutY="132.0" prefHeight="31.0" prefWidth="153.0" promptText="Select Country" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Label fx:id="welcomeLabel" layoutX="333.0" layoutY="65.0" text="Welcome to Hajj 2022" textFill="#030100">
+         <font>
+            <Font name="Andalus" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="next" layoutX="463.0" layoutY="568.0" mnemonicParsing="false" onAction="#nextAction" prefHeight="40.0" prefWidth="74.0" text="Next">
+         <tooltip>
+            <Tooltip fx:id="tooltip" text="In order to book your hajj, you have to fill the information below. Our website is authorized by the goverment. Your information is secure and private. " />
+         </tooltip></Button>
+      <Label fx:id="label2" layoutX="88.0" layoutY="150.0" text="Please fill in the application below :">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TitledPane fx:id="VSPane" layoutX="530.0" layoutY="362.0" prefHeight="120.0" prefWidth="266.0" text="Vaccination Status">
+         <content>
+            <Pane prefHeight="79.0" prefWidth="264.0" style="-fx-background-color: F4F0DB;">
+               <children>
+                  <RadioButton fx:id="vaccinated" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Vaccinated (or booked)">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="vaccinegroup" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="notVaccinated" layoutX="14.0" layoutY="50.0" mnemonicParsing="false" onAction="#notVaccinated" text="Not Vaccinated" toggleGroup="$vaccinegroup" />
+                  <ImageView fx:id="vaccinePic" fitHeight="50.0" fitWidth="96.0" layoutX="154.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@vaxicon-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </content>
+      </TitledPane>
+      <MenuBar fx:id="menubar" prefHeight="32.0" prefWidth="1000.0">
+        <menus>
+          <Menu fx:id="file" mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#closeAction" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="DOWN" code="C" control="UP" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+          <Menu fx:id="edit" mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem fx:id="backg" mnemonicParsing="false" onAction="#backgroundAction" text="Change Background color" />
+                  <MenuItem fx:id="retBackground" mnemonicParsing="false" onAction="#retBackgroundColor" text="Return Background" />
+                  <MenuItem fx:id="font" mnemonicParsing="false" onAction="#fontAction" text="Change Font" />
+                  <MenuItem fx:id="returnFont" mnemonicParsing="false" onAction="#retFont" text="Return Font" />
+              <MenuItem fx:id="clear" mnemonicParsing="false" onAction="#clearAction" text="Clear All" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

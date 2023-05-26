@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: E1D8C4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopproject1.PersonalinfodisplayController">
+   <children>
+      <Label fx:id="title" layoutX="290.0" layoutY="75.0" prefHeight="57.0" prefWidth="420.0" text="Personal Information Check" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="290.0">
+         <font>
+            <Font name="Andalus" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="218.0" layoutY="144.0" text="Before you move to choose your campaign, please check your personal Information" />
+      <TitledPane animated="false" layoutX="350.0" layoutY="208.0" prefHeight="307.0" prefWidth="322.0" text="Personal Information">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: F4F0DB;">
+               <children>
+                  <Label fx:id="namelabel" layoutX="34.0" layoutY="14.0" text="Full Name:" />
+                  <Label fx:id="idlabel" layoutX="34.0" layoutY="62.0" text="ID:" />
+                  <Label fx:id="countrylabel" layoutX="34.0" layoutY="117.0" text="Country:" />
+                  <Label fx:id="livinglabel" layoutX="34.0" layoutY="166.0" text="Living Status:" />
+                  <Label fx:id="vaccinelabel" layoutX="34.0" layoutY="215.0" text="Vaccination Status:" />
+                  <Label fx:id="username" layoutX="171.0" layoutY="14.0" prefHeight="21.0" prefWidth="144.0" />
+                  <Label fx:id="userid" layoutX="171.0" layoutY="62.0" prefHeight="21.0" prefWidth="145.0" />
+                  <Label fx:id="usercountry" layoutX="171.0" layoutY="117.0" prefHeight="21.0" prefWidth="149.0" />
+                  <Label fx:id="userliving" layoutX="171.0" layoutY="166.0" prefHeight="21.0" prefWidth="118.0" />
+                  <Label fx:id="uservaccine" layoutX="171.0" layoutY="215.0" prefHeight="21.0" prefWidth="127.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <Button fx:id="proceed" layoutX="549.0" layoutY="570.0" mnemonicParsing="false" onAction="#proceedAction" prefHeight="36.0" prefWidth="93.0" text="proceed" textAlignment="JUSTIFY" />
+      <Button fx:id="back" layoutX="386.0" layoutY="570.0" mnemonicParsing="false" onAction="#backAction" prefHeight="36.0" prefWidth="93.0" text="back" />
+   </children>
+</AnchorPane>

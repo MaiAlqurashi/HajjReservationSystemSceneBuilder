@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anc2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #E1D8C4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopproject1.RegisterWindowController">
+   <children>
+      <Label fx:id="title" layoutX="348.0" layoutY="24.0" text="Register / Sign in">
+         <font>
+            <Font name="Andalus" size="48.0" />
+         </font>
+      </Label>
+      <Pane layoutX="363.0" layoutY="156.0" prefHeight="304.0" prefWidth="623.0">
+         <children>
+            <Label fx:id="termsLabel" layoutX="24.0" layoutY="14.0" prefHeight="27.0" prefWidth="201.0" text="Terms and Conditions:">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="tL1" layoutX="26.0" layoutY="41.0" prefHeight="37.0" prefWidth="485.0" text="1. People under the age of 18 and above 60 years won’t be eligible" />
+            <Label fx:id="tL2" layoutX="26.0" layoutY="85.0" text="2. Pilgrims must have completed both doses of covid vaccine before starting" />
+            <Label fx:id="tL3" layoutX="41.0" layoutY="113.0" text="for Hajj and pilgrims of foreign origin should have taken Saudi approved vaccines." />
+            <Label fx:id="tL4" layoutX="24.0" layoutY="148.0" text="3. A negative PCR test conducted 40 hours before dispatching to the area of pilgrimage" />
+            <Label fx:id="tL5" layoutX="41.0" layoutY="179.0" text="in Saudi-approved laboratories is another condition announced by Riyadh." />
+            <Label fx:id="tL6" layoutX="24.0" layoutY="209.0" text="4. Hajj pilgrimage should be done by following strict health protocols and guidelines." />
+            <Label fx:id="tL7" layoutX="24.0" layoutY="242.0" text="5. The pilgrim shouldn’t have a history of sickness or hospitalization" />
+            <Label fx:id="tL8" layoutX="41.0" layoutY="269.0" text="prior 6 months from the date of travel." />
+            <VBox layoutX="-9.0" layoutY="-4.0" prefHeight="311.0" prefWidth="633.0" />
+         </children>
+      </Pane>
+      <Button fx:id="next" layoutX="589.0" layoutY="571.0" mnemonicParsing="false" onAction="#nextAction" prefHeight="37.0" prefWidth="88.0" text="Next" />
+      <Pane layoutX="493.0" layoutY="472.0" prefHeight="89.0" prefWidth="305.0">
+         <children>
+            <RadioButton fx:id="termsRadioButton" layoutX="25.0" layoutY="34.0" mnemonicParsing="false" onAction="#termsRadioAction" text="I accept terms and conditions" />
+         </children>
+      </Pane>
+      <AnchorPane fx:id="anc1" prefHeight="700.0" prefWidth="305.0" style="-fx-background-color: F4F0DB;">
+         <children>
+            <Pane layoutX="19.0" layoutY="161.0" prefHeight="120.0" prefWidth="152.0">
+               <children>
+                  <RadioButton fx:id="signIn" layoutX="31.0" layoutY="60.0" mnemonicParsing="false" text="Sign in">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderGroup" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="register" layoutX="31.0" layoutY="25.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" text="Register" toggleGroup="$genderGroup">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </Pane>
+            <VBox layoutX="45.0" layoutY="298.0" prefHeight="200.0" prefWidth="201.0" spacing="15.0">
+               <children>
+                  <Label fx:id="emailLabel" prefHeight="21.0" prefWidth="111.0" text="E-mail address:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailTextBox" promptText="example@mail.com" />
+                  <Label fx:id="passwordLabel" text="Password:" />
+                  <PasswordField fx:id="passwordTextBox" />
+               </children>
+            </VBox>
+            <MenuBar fx:id="menubar" prefHeight="32.0" prefWidth="305.0">
+              <menus>
+                <Menu fx:id="file" mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="close" mnemonicParsing="false" onAction="#closeAction" text="Close" />
+                  </items>
+                </Menu>
+                <Menu fx:id="edit" mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="changeBackground" mnemonicParsing="false" onAction="#changeBackgroundAction" text="Change Background Color" />
+                        <MenuItem fx:id="returnBackground" mnemonicParsing="false" onAction="#returnBackgroundAction" text="Return Background Color" />
+                        <MenuItem fx:id="changeFont" mnemonicParsing="false" onAction="#changeFontAction" text="Change Font" />
+                        <MenuItem fx:id="returnFont" mnemonicParsing="false" onAction="#returnFontAction" text="Return Font" />
+                        <MenuItem fx:id="clear" mnemonicParsing="false" onAction="#clearAction" text="Clear All" />
+                  </items>
+                </Menu>
+                <Menu fx:id="help" mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" onAction="#aboutAction" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

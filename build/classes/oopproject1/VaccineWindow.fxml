@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: E1D8C4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopproject1.VaccineWindowController">
+   <children>
+      <Label fx:id="title" layoutX="272.0" layoutY="49.0" text="Covid-19 Vaccination Booking">
+         <font>
+            <Font name="Andalus" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="label1" layoutX="98.0" layoutY="139.0" text="Note: You can not apply to hajj unless you are vaccinated">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TitledPane layoutX="140.0" layoutY="213.0" prefHeight="309.0" prefWidth="721.0" text="Personal Information">
+         <content>
+            <Pane prefHeight="223.0" prefWidth="674.0" style="-fx-background-color: F4F0DB;">
+               <children>
+                  <Pane layoutX="8.0" prefHeight="275.0" prefWidth="244.0">
+                     <children>
+                        <Label fx:id="idlabel" layoutX="10.0" layoutY="42.0" text="Enter ID:" />
+                        <TextField fx:id="userid" layoutX="76.0" layoutY="37.0" prefHeight="31.0" prefWidth="135.0" promptText="Enter Your ID" />
+                        <Label fx:id="namelabel" layoutX="10.0" layoutY="102.0" text="Full Name:" />
+                        <Label fx:id="genderlabel" layoutX="10.0" layoutY="165.0" text="Gender:" />
+                        <TextField fx:id="username" layoutX="94.0" layoutY="97.0" prefHeight="31.0" prefWidth="136.0" promptText="Enter Your Name" />
+                        <Pane layoutX="66.0" layoutY="158.0" prefHeight="89.0" prefWidth="167.0">
+                           <children>
+                              <RadioButton fx:id="male" layoutX="17.0" layoutY="8.0" mnemonicParsing="false" text="Male">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="gengroup" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="female" layoutX="17.0" layoutY="49.0" mnemonicParsing="false" text="Female" toggleGroup="$gengroup" />
+                              <ImageView fitHeight="33.0" fitWidth="39.0" layoutX="83.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@mnb-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="91.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@fe-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="237.0" layoutY="14.0" prefHeight="248.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="conditionlabel" layoutX="13.0" layoutY="25.0" text="Medical Condition" />
+                        <Label fx:id="preglabel" layoutX="13.0" layoutY="124.0" text="Are you pregnant?" />
+                        <Pane layoutX="4.0" layoutY="46.0" prefHeight="69.0" prefWidth="193.0">
+                           <children>
+                              <RadioButton fx:id="stable" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" text="stable">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="medcondition" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="unstable" layoutX="14.0" layoutY="45.0" mnemonicParsing="false" text="unstable" toggleGroup="$medcondition" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="149.0" prefHeight="81.0" prefWidth="176.0">
+                           <children>
+                              <RadioButton fx:id="pregnant" layoutX="7.0" layoutY="4.0" mnemonicParsing="false" text="yes">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="preggroup" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="notpregnant" layoutX="9.0" layoutY="41.0" mnemonicParsing="false" text="no" toggleGroup="$preggroup" />
+                              <ImageView fitHeight="66.0" fitWidth="65.0" layoutX="58.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@pregnant-woman-icon-logo-260nw-1225514050-removebg-preview%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="427.0" layoutY="1.0" prefHeight="274.0" prefWidth="242.0">
+                     <children>
+                        <Label fx:id="label2" layoutX="10.0" layoutY="14.0" prefHeight="21.0" prefWidth="223.0" text="if unstable, mark your condition:" />
+                        <Label fx:id="label3" layoutX="18.0" layoutY="179.0" text="*other medical condition:" />
+                        <TextField fx:id="othertext" layoutX="20.0" layoutY="211.0" prefHeight="26.0" prefWidth="178.0" />
+                        <CheckBox fx:id="diabetes" layoutX="14.0" layoutY="57.0" mnemonicParsing="false" text="diabetes" />
+                        <CheckBox fx:id="hemoplilia" layoutX="120.0" layoutY="57.0" mnemonicParsing="false" text="hemophilia" />
+                        <CheckBox fx:id="asthma" layoutX="14.0" layoutY="99.0" mnemonicParsing="false" text="asthma" />
+                        <CheckBox fx:id="lungcancer" layoutX="119.0" layoutY="99.0" mnemonicParsing="false" text="lung cancer" />
+                        <CheckBox fx:id="bpressure" layoutX="14.0" layoutY="137.0" mnemonicParsing="false" text="high/low blood pressure" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </content>
+      </TitledPane>
+      <Button layoutX="500.0" layoutY="587.0" mnemonicParsing="false" onAction="#vaccAction" prefHeight="44.0" prefWidth="147.0" text="Book Vaccination" />
+      <Button layoutX="389.0" layoutY="587.0" mnemonicParsing="false" onAction="#cancelAction" prefHeight="44.0" prefWidth="76.0" text="Cancel" />
+      <Label fx:id="label3" layoutX="337.0" layoutY="544.0" text="You are now ready to start filling your application" />
+   </children>
+</AnchorPane>
